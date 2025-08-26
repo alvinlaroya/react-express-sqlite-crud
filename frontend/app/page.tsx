@@ -45,19 +45,26 @@ export default function Home() {
     setOpen(false);
   }
 
+  const formatAmount = (amount: number) => {
+    return amount.toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    });
+  }
+
   return (
     <div className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card>
           <div className="text-sm text-zinc-500">Total Revenue</div>
           <div className="text-2xl font-bold mt-1">
-            ${loadingSummary ? "…" : summary?.totalRevenue ?? 0}
+            {loadingSummary ? "…" : formatAmount(summary?.totalRevenue ?? 0)}
           </div>
         </Card>
         <Card>
           <div className="text-sm text-zinc-500">Median Order Price</div>
           <div className="text-2xl font-bold mt-1">
-            ${loadingSummary ? "…" : summary?.medianOrderPrice ?? 0}
+            {loadingSummary ? "…" : formatAmount(summary?.medianOrderPrice ?? 0)}
           </div>
         </Card>
         <Card>
@@ -107,7 +114,7 @@ export default function Home() {
                 <TableRow key={o.id}>
                   <TableCell className="font-medium">{o.product}</TableCell>
                   <TableCell>{o.qty}</TableCell>
-                  <TableCell>${o.price}</TableCell>
+                  <TableCell>{formatAmount(o.price)}</TableCell>
                 </TableRow>
               ))}
               {orders.length === 0 && (
@@ -184,7 +191,7 @@ export default function Home() {
                   </FormItem>
                 )}
               />
-               <FormField
+              <FormField
                 control={form.control}
                 name="price"
                 render={({ field }) => (
