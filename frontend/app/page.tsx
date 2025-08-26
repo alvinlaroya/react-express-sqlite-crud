@@ -165,7 +165,7 @@ export default function Home() {
                 )}
               />
             </div>
-            <div className="col-span-2 grid grid-cols-2 gap-2">s
+            <div className="col-span-2 grid grid-cols-2 gap-2">
               <FormField
                 control={form.control}
                 name="qty"
