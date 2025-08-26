@@ -1,5 +1,7 @@
 # BarBooks Assessment Documentation
 
+![App Screenshot](./assets/screenshot.png)
+
 ## Backend (Node.js, Express, SQLite)
 
 ### Overview
