@@ -51,13 +51,13 @@ export default function Home() {
         <Card>
           <div className="text-sm text-zinc-500">Total Revenue</div>
           <div className="text-2xl font-bold mt-1">
-            {loadingSummary ? "…" : summary?.totalRevenue ?? 0}
+            ${loadingSummary ? "…" : summary?.totalRevenue ?? 0}
           </div>
         </Card>
         <Card>
           <div className="text-sm text-zinc-500">Median Order Price</div>
           <div className="text-2xl font-bold mt-1">
-            {loadingSummary ? "…" : summary?.medianOrderPrice ?? 0}
+            ${loadingSummary ? "…" : summary?.medianOrderPrice ?? 0}
           </div>
         </Card>
         <Card>
