@@ -1,5 +1,3 @@
-# BarBooks Assessment Backend
-
 A RESTful API built with Express and SQLite for managing product orders and providing summary statistics.
 
 ## Endpoints
