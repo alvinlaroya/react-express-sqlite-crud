@@ -1,4 +1,4 @@
-# BarBooks Assessment - Frontend (Next.js + shadcn-style UI)
+# Frontend (Next.js + shadcn-style UI)
 
 This repository contains the frontend-only implementation for the assessment using Next.js (App Router, TypeScript, Tailwind v4). It integrates:
 
